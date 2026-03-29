@@ -14,7 +14,7 @@ if (!fs.existsSync(publicWappenDir)) {
 
 // Define unique variations (skip duplicates)
 const variations = [
-  'Gemini_Generated_Image_e9ia85e9ia85e9ia.png', // Hero: variation 2
+  'transparent.png', // Hero: transparent version
   'Gemini_Generated_Image_3hoo6t3hoo6t3hoo.png', // Gallery: 1
   'Gemini_Generated_Image_ev5e0mev5e0mev5e.png', // Gallery: 2
   'Gemini_Generated_Image_g2vqxdg2vqxdg2vq.png', // Gallery: 3
