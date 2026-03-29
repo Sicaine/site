@@ -33,21 +33,21 @@ async function optimizeImages() {
   console.log('Starting image optimization...\n');
 
   try {
-    // Process hero image
+    // Process hero image (preserve transparency with contain fit)
     const heroSrc = path.join(wappenDir, variations[0]);
-    console.log(`📸 Processing hero image: ${variations[0]}`);
+    console.log(`📸 Processing hero image: ${variations[0]} (preserving transparency)`);
 
     await sharp(heroSrc)
-      .resize(800, 450, { fit: 'cover', position: 'center' })
-      .webp({ quality: 85 })
+      .resize(800, 450, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .webp({ quality: 85, alphaQuality: 100 })
       .toFile(path.join(publicWappenDir, 'hero.webp'));
 
     await sharp(heroSrc)
-      .resize(800, 450, { fit: 'cover', position: 'center' })
-      .png({ quality: 85 })
+      .resize(800, 450, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .png()
       .toFile(path.join(publicWappenDir, 'hero.png'));
 
-    console.log('   ✓ hero.webp & hero.png created\n');
+    console.log('   ✓ hero.webp & hero.png created (with transparency)\n');
 
     // Process gallery images
     const galleryVariations = variations.slice(1); // All except hero
