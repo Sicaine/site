@@ -1,0 +1,11 @@
+{
+  "services": [
+    {
+      "name": "Home Dashboard",
+      "url": "http://home.uhu.sh",
+      "description": "Home server dashboard and services",
+      "icon": "🏠"
+    }
+  ],
+  "projects": []
+}

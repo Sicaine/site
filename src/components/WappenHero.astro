@@ -1,0 +1,97 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-content">
+    <picture class="wappen-image">
+      <source srcset="/wappen/hero.webp" type="image/webp" />
+      <img src="/wappen/hero.png" alt="Familienwappen - Wurzeln schlagen, weite wagen" width="400" height="225" loading="eager" />
+    </picture>
+    <h2 class="motto">Wurzeln schlagen,<br />weite wagen</h2>
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+    min-height: 500px;
+    background: linear-gradient(135deg, rgba(107, 123, 59, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 600px;
+  }
+
+  .wappen-image {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  .wappen-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(44, 44, 44, 0.1);
+  }
+
+  .motto {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--olive-green);
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2rem 1rem;
+      min-height: 400px;
+    }
+
+    .wappen-image {
+      max-width: 300px;
+    }
+
+    .motto {
+      font-size: 1.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 1.5rem 1rem;
+      min-height: 350px;
+    }
+
+    .wappen-image {
+      max-width: 250px;
+    }
+
+    .motto {
+      font-size: 1.5rem;
+    }
+  }
+</style>

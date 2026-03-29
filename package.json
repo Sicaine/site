@@ -1,0 +1,19 @@
+{
+  "name": "uhu-sh-landing",
+  "version": "1.0.0",
+  "description": "uhu.sh family homepage with Familienwappen gallery",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "optimize-images": "node scripts/optimize-images.js"
+  },
+  "dependencies": {
+    "astro": "^6.1.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.1",
+    "typescript": "^5.3.3"
+  }
+}

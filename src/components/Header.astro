@@ -1,0 +1,65 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="header">
+  <nav class="container nav">
+    <a href="/" class={`nav-link ${currentPath === '/' ? 'active' : ''}`}>Home</a>
+    <a href="/wappen" class={`nav-link ${currentPath === '/wappen/' ? 'active' : ''}`}>Wappen</a>
+  </nav>
+</header>
+
+<style>
+  .header {
+    background-color: white;
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: var(--olive-green);
+  }
+
+  .nav-link.active {
+    color: var(--olive-green);
+  }
+
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--olive-green);
+  }
+
+  @media (max-width: 768px) {
+    .nav {
+      gap: 1.5rem;
+      padding: 1rem 0;
+    }
+
+    .nav-link {
+      font-size: 1rem;
+    }
+  }
+</style>

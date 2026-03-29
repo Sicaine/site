@@ -1,0 +1,95 @@
+---
+const galleryImages = [
+  { thumb: '/wappen/thumb-1.webp', full: '/wappen/full-1.webp', num: 1 },
+  { thumb: '/wappen/thumb-2.webp', full: '/wappen/full-2.webp', num: 2 },
+  { thumb: '/wappen/thumb-3.webp', full: '/wappen/full-3.webp', num: 3 },
+  { thumb: '/wappen/thumb-4.webp', full: '/wappen/full-4.webp', num: 4 },
+  { thumb: '/wappen/thumb-5.webp', full: '/wappen/full-5.webp', num: 5 },
+  { thumb: '/wappen/thumb-6.webp', full: '/wappen/full-6.webp', num: 6 },
+];
+---
+
+<section class="gallery">
+  <div class="container">
+    <h2>Familienwappen Variations</h2>
+    <p class="gallery-intro">Seven unique variations of our family coat of arms, each representing the balance between our agricultural heritage and modern aspirations.</p>
+
+    <div class="gallery-grid">
+      {
+        galleryImages.map((image) => (
+          <a href={image.full} target="_blank" rel="noopener noreferrer" class="gallery-item">
+            <img src={image.thumb} alt={`Familienwappen variation ${image.num} - Wurzeln schlagen, weite wagen`} loading="lazy" width="400" height="224" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery {
+    padding: 4rem 0;
+  }
+
+  .gallery h2 {
+    margin-top: 0;
+  }
+
+  .gallery-intro {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin-bottom: 2rem;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .gallery-item {
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(44, 44, 44, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+
+  .gallery-item:hover {
+    box-shadow: 0 8px 20px rgba(44, 44, 44, 0.15);
+    border-color: var(--olive-green);
+    transform: translateY(-4px);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .gallery {
+      padding: 2.5rem 0;
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-intro {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import WappenGallery from '../components/WappenGallery.astro';
+---
+
+<Layout title="Familienwappen Gallery - uhu.sh" description="Family coat of arms variations gallery">
+  <Header />
+  <main>
+    <article class="wappen-page">
+      <section class="wappen-intro">
+        <div class="container">
+          <h1>Our Family Coat of Arms</h1>
+          <p class="intro-text">
+            <em>"Wurzeln schlagen, weite wagen"</em> — Plant roots, dare the distance.
+          </p>
+          <p class="intro-description">
+            Our Familienwappen represents the balance between our deep agricultural heritage and our modern aspirations in technology and beyond. Each element tells a story of growth, stability, and bold vision.
+          </p>
+        </div>
+      </section>
+
+      <section class="container">
+        <WappenGallery />
+      </section>
+
+      <section class="symbolism">
+        <div class="container">
+          <h2>Symbolism</h2>
+          <div class="symbolism-content">
+            <div class="symbol">
+              <h3>🌾 Agricultural Heritage</h3>
+              <p>The foundation of our family values, representing hard work, growth, and connection to the land. These roots run deep and strong through generations.</p>
+            </div>
+            <div class="symbol">
+              <h3>⚙️ Modern Innovation</h3>
+              <p>Our embrace of technology and forward-thinking vision. We dare to explore new horizons while maintaining our core values and traditions.</p>
+            </div>
+            <div class="symbol">
+              <h3>🏰 Stability & Pride</h3>
+              <p>A symbol of family unity, heritage, and the enduring nature of our bonds. Built to last, carried with pride through time.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 uhu.sh. All rights reserved.</p>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  .wappen-page {
+    width: 100%;
+  }
+
+  .wappen-intro {
+    background: linear-gradient(135deg, rgba(107, 123, 59, 0.08) 0%, rgba(212, 175, 55, 0.08) 100%);
+    padding: 4rem 0;
+  }
+
+  .wappen-intro h1 {
+    margin-top: 0;
+    color: var(--olive-green);
+  }
+
+  .intro-text {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--olive-green);
+    margin-bottom: 1rem;
+  }
+
+  .intro-description {
+    font-size: 1.1rem;
+    max-width: 700px;
+    color: var(--text-light);
+  }
+
+  .symbolism {
+    padding: 4rem 0;
+    background-color: var(--bg-white);
+  }
+
+  .symbolism h2 {
+    margin-top: 0;
+  }
+
+  .symbolism-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .symbol {
+    padding: 1.5rem;
+    background-color: white;
+    border-left: 4px solid var(--olive-green);
+    border-radius: 4px;
+  }
+
+  .symbol h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: var(--text-dark);
+  }
+
+  .symbol p {
+    margin-bottom: 0;
+    color: var(--text-light);
+  }
+
+  .footer {
+    background-color: var(--text-dark);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+  }
+
+  .footer p {
+    margin: 0;
+    color: inherit;
+  }
+
+  @media (max-width: 768px) {
+    .wappen-intro {
+      padding: 2.5rem 0;
+    }
+
+    .symbolism {
+      padding: 2.5rem 0;
+    }
+
+    .symbolism-content {
+      gap: 1.5rem;
+    }
+
+    .intro-text {
+      font-size: 1.25rem;
+    }
+
+    .intro-description {
+      font-size: 1rem;
+    }
+  }
+</style>
