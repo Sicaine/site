@@ -6,6 +6,9 @@ const currentPath = Astro.url.pathname;
   <nav class="container nav">
     <a href="/" class={`nav-link ${currentPath === '/' ? 'active' : ''}`}>Home</a>
     <a href="/wappen" class={`nav-link ${currentPath === '/wappen/' ? 'active' : ''}`}>Wappen</a>
+    <a href="/experiments" class={`nav-link ${currentPath === '/experiments/' ? 'active' : ''}`}
+      >Experiments</a
+    >
   </nav>
 </header>
 

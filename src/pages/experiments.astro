@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ExperimentTiles from '../components/ExperimentTiles.astro';
+---
+
+<Layout
+  title="Experiments - uhu.sh"
+  description="Side projects and experiments, each with a live page and source on GitHub"
+>
+  <Header />
+  <main>
+    <article class="experiments-page">
+      <section class="experiments-intro">
+        <div class="container">
+          <h1>Experiments</h1>
+          <p class="intro-text">Things I build to find out whether they work.</p>
+          <p class="intro-description">
+            Small projects, prototypes and write-ups — mostly hardware, automation and
+            self-hosting. Every tile links to the live page and to the source on GitHub.
+          </p>
+        </div>
+      </section>
+
+      <section class="container experiments-list">
+        <ExperimentTiles />
+      </section>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 uhu.sh. All rights reserved.</p>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  .experiments-page {
+    width: 100%;
+  }
+
+  .experiments-intro {
+    padding: 4rem 0 2rem;
+    text-align: center;
+  }
+
+  .experiments-intro h1 {
+    margin-top: 0;
+  }
+
+  .intro-text {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    color: var(--olive-green);
+    margin-bottom: 1rem;
+  }
+
+  .intro-description {
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+
+  .experiments-list {
+    padding-bottom: 5rem;
+  }
+
+  .footer {
+    background-color: white;
+    border-top: 1px solid var(--border-light);
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+
+  @media (max-width: 768px) {
+    .experiments-intro {
+      padding: 2.5rem 0 1.5rem;
+    }
+
+    .intro-text {
+      font-size: 1.15rem;
+    }
+
+    .experiments-list {
+      padding-bottom: 3rem;
+    }
+  }
+</style>

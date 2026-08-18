@@ -1,0 +1,15 @@
+{
+  "experiments": [
+    {
+      "name": "MineWithPurpose",
+      "tagline": "Consumer-hardware crypto mining, documented end to end",
+      "description": "A practical guide to mining Monero and Bitcoin on ordinary CPUs and GPUs — copy-paste XMRig commands for Linux, macOS and Windows, plus patterns for autonomous agents that mine with load-aware throttling.",
+      "icon": "⛏️",
+      "status": "live",
+      "year": "2026",
+      "tags": ["Monero", "XMRig", "RandomX", "Docker"],
+      "page": "https://sicaine.github.io/crypto/",
+      "repo": "https://github.com/Sicaine/crypto"
+    }
+  ]
+}
